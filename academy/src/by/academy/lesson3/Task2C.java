@@ -7,6 +7,7 @@ public class Task2C {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Ведите значение");
 		int a = sc.nextInt();
+		
 
 	}
 }
