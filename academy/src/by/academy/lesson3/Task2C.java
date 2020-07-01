@@ -8,5 +8,6 @@ public class Task2C {
 		System.out.println("Ведите значение");
 		int a = sc.nextInt();
 		
+		
 	}
 }
