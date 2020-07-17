@@ -14,8 +14,9 @@ public class Task3Strings {
 		int a = sc.nextInt();
 		String[] array = new String[a];
 		System.out.println(" Enter " + a + " strings ");
+		sc.nextLine();
 		for (int i = 0; i < a; i++) {
-			array[i] = sc.next();
+			array[i] = sc.nextLine();
 		}
 		double mediana = 0;
 		for (int i = 0; i < a; i++) {
