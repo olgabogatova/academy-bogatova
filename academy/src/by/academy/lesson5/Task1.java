@@ -14,11 +14,11 @@ public class Task1 {
 		int a = sc.nextInt();
 		String[] array = new String[a];
 		System.out.println(" Enter " + a + " strings ");
+		sc.nextLine();
+		System.out.println("");
 
 		for (int i = 0; i < a; i++) {
-
-			array[i] = sc.next();
-			System.out.println(array[i].length());
+			array[i] = sc.nextLine();
 		}
 		String min = array[0];
 		String max = array[0];
