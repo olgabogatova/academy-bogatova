@@ -16,7 +16,7 @@ public class Phone {
 	}
 
 	public Phone(String number, double weight) {
-		this(number, weight, "Iphone");
+		this(number, weight, null);
 	}
 
 	public Phone(String number, String model) {
@@ -66,4 +66,7 @@ public class Phone {
 		return Arrays.toString(numbers);
 	}
 
+	public void printInfo() {
+		System.out.println("Number: " + number+ ", " + "Weight: " + weight + ", "+ "Model: " + model);
+	}
 }
