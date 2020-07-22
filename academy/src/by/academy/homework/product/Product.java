@@ -24,12 +24,14 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	public double getPrice() {
 		return price;
 	}
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
 	public int getQuantity() {
 		return quantity;
 	}
@@ -38,9 +40,19 @@ public class Product {
 	}
 	
 	
-		public double fullPrice () {
-			return quantity*price;
-		}
-		
+	public double fullPrice () {
+		return quantity*price;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Product [name=").append(name).append(", price=").append(price).append(", quantity=")
+				.append(quantity).append("]");
+		return builder.toString();
+	}
+	
+	
+	
 	
 }
