@@ -11,7 +11,7 @@ public class Task1RegEx {
 		 		"\r\n" + 
 		 		"Iron Man premiered in Sydney on April 14, 2008, and was released in the United States on May 2, as the first film in Phase One of the MCU. It grossed over $585 million on its $140 million budget, becoming the eighth-highest grossing film of 2008. The film was praised by critics for its acting (particularly Downey's), screenplay, direction, visual effects, and action sequences. It was selected by the American Film Institute as one of the ten best films of 2008 and received two nominations at the 81st Academy Awards for Best Sound Editing and Best Visual Effects. It was followed by two sequels, Iron Man 2 in 2010 and Iron Man 3 in 2013.";
 		 		
-		 Pattern p = Pattern.compile(" [a-cA-C]\\S*");
+		 Pattern p = Pattern.compile("\\b[a-cA-C](.*?)\\b");
 		 Matcher m = p.matcher(text);
 		 
 		 StringBuffer newText = new StringBuffer();
