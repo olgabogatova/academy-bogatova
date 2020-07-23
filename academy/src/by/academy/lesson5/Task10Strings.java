@@ -13,7 +13,6 @@ public class Task10Strings {
 		int k = sc.nextInt();
 		String[] o = new String[] { "(-10000,0]", "(0,5]", "(5,10]", "(10,10000]" };
 		for (String f : o) {
-
 			switch (f) {
 			case "(-10000,0]":
 				if (k > -10000 && k <= 0) {
