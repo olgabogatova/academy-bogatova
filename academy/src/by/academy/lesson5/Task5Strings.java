@@ -48,8 +48,6 @@ public class Task5Strings {
 						}
 					}
 				}
-//				System.out.println(" ");
-//				System.out.println(words[i] + " " + countVowels + " " + countConsonants);
 				if (countConsonants == countVowels) {
 					wordsVC++;
 				}
