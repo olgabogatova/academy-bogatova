@@ -4,7 +4,6 @@
 
 package by.academy.lesson5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task15stringss {
