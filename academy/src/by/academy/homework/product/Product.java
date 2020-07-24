@@ -5,9 +5,19 @@ public class Product {
 	private String name;
 	private double price;
 	private int quantity;
+	protected int discount;
 	
 	public Product() {
 		super();
+	}
+	
+	public Product(String name,double price,int quantity, int discount) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+		this.discount = discount;
+
 	}
 	
 	public Product(String name,double price,int quantity) {
@@ -15,7 +25,7 @@ public class Product {
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
-	}
+		}
 	
 	
 	public String getName() {
@@ -39,16 +49,29 @@ public class Product {
 		this.quantity = quantity;
 	}
 	
+	public int getDiscount() {
+		return discount;
+	}
 	
+	public void setDiscount (int discount) {
+		this.discount = discount ;
+	}
+	
+	public double fullPriceWithDiscount() {
+		double a=0;
+		a= (quantity*price)-((price*quantity*discount)/100);
+		return a;
+	}
 	public double fullPrice () {
 		return quantity*price;
 	}
+	
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Product [name=").append(name).append(", price=").append(price).append(", quantity=")
-				.append(quantity).append("]");
+				.append(quantity).append(discount).append("]");
 		return builder.toString();
 	}
 	

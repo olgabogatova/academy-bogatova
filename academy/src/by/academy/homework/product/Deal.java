@@ -65,7 +65,7 @@ public class Deal {
 	public double deal() {
 		double d=0;
 		for(Product p: products) {
-			d+=p.getPrice()*p.getQuantity();
+			d+=(p.getPrice()*p.getQuantity())-(p.getPrice() * p.getQuantity()*p.getDiscount()/100);
 		}
 		return d;
 	}
