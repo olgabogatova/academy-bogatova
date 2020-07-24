@@ -22,6 +22,7 @@ public class Main {
 		System.out.println("Enter seller's date of birth :");
 		seller.setDateOfBirth(sc.nextLine());
 
+		
 		User buyer = new User();
 		System.out.println("Enter buyer's name :");
 		buyer.setName(sc.nextLine());
@@ -46,7 +47,7 @@ public class Main {
 				+ deal.list());
 		System.out.println("Deal price : " + deal.deal() + "\n");
 		System.out.println("Deal info : " + "\n" + "Deadline is on : " + deal.getDeadline());
-		
+
 		sc.close();
 	}
 }

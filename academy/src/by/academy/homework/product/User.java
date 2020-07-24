@@ -45,6 +45,13 @@ public class User {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+		Pattern p = Pattern.compile("^\\+37529[\\d]{7}$");
+		Matcher m = p.matcher(getPhone());
+		if (m.find()) {
+		} else {
+			System.out.println("Phone number is invalid " + "\n" + "Enter phone number again. (Example: +375291234567");
+			setPhone(sc.nextLine());
+		}
 	}
 
 	public String getEmail() {
@@ -53,6 +60,13 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+		Pattern p = Pattern.compile("\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*\\.\\w{2,4}");
+		Matcher m = p.matcher(getEmail());
+		if (m.find()) {
+		} else {
+			System.out.println("Email is invalid " + "\n" + "Enter Email again. (Example: bob@gmail.com");
+			setEmail(sc.nextLine());
+		}
 	}
 
 	public String getDateOfBirth() {
@@ -73,9 +87,9 @@ public class User {
 			setDateOfBirth(sc.nextLine());
 
 		}
-		sc.close();
+		
 	}
-
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -83,5 +97,5 @@ public class User {
 				.append(", dateOfBirth=").append(dateOfBirth).append("]");
 		return builder.toString();
 	}
-
+  
 }
