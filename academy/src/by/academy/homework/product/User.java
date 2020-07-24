@@ -1,29 +1,29 @@
 package by.academy.homework.product;
 
-import java.util.Date;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class User {
 
 	private String name;
 	private String phone;
 	private String email;
-	private Date dateOfBirth;
-	
-	
-	
+	private String dateOfBirth;
+
+	Scanner sc = new Scanner(System.in);
+
 	public User() {
 		super();
 	}
-	
+
 	public User(String name) {
 		super();
 		this.name = name;
-		
-	}
-	
 
-	
-	public User(String name, String phone, String email, Date dateOfBirth) {
+	}
+
+	public User(String name, String phone, String email, String dateOfBirth) {
 		super();
 		this.name = name;
 		this.phone = phone;
@@ -55,12 +55,25 @@ public class User {
 		this.email = email;
 	}
 
-	public Date getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+		Pattern p1 = Pattern.compile("([0]?[1-9]|[1|2][0-9]|[3][0|1])/([0]?[1-9]|1[0-2])/\\d{4}");
+		Pattern p2 = Pattern.compile("([0]?[1-9]|[1|2][0-9]|[3][0|1])-([0]?[1-9]|1[0-2])-\\d{4}"); // b
+		Matcher m1 = p1.matcher(getDateOfBirth());
+		Matcher m2 = p2.matcher(getDateOfBirth());
+		if (m1.find() || m2.find()) {
+
+		} else {
+			System.out.println("Date of birth is invalid " + "\n" + "Enter date of birth again. (Example: 11/02/2000");
+
+			setDateOfBirth(sc.nextLine());
+
+		}
+		sc.close();
 	}
 
 	@Override
@@ -70,7 +83,5 @@ public class User {
 				.append(", dateOfBirth=").append(dateOfBirth).append("]");
 		return builder.toString();
 	}
-	
-	
-	
+
 }

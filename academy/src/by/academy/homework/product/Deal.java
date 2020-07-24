@@ -79,6 +79,7 @@ public class Deal {
 	}
 	
 	
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
