@@ -49,7 +49,7 @@ public class User {
 		Matcher m = p.matcher(getPhone());
 		if (m.find()) {
 		} else {
-			System.out.println("Phone number is invalid " + "\n" + "Enter phone number again. (Example: +375291234567");
+			System.out.println("Phone number is invalid " + "\n" + "Enter phone number again. (Example: +375291234567)");
 			setPhone(sc.nextLine());
 		}
 	}
@@ -64,7 +64,7 @@ public class User {
 		Matcher m = p.matcher(getEmail());
 		if (m.find()) {
 		} else {
-			System.out.println("Email is invalid " + "\n" + "Enter Email again. (Example: bob@gmail.com");
+			System.out.println("Email is invalid " + "\n" + "Enter Email again. (Example: bob@gmail.com)");
 			setEmail(sc.nextLine());
 		}
 	}
@@ -82,7 +82,7 @@ public class User {
 		if (m1.find() || m2.find()) {
 
 		} else {
-			System.out.println("Date of birth is invalid " + "\n" + "Enter date of birth again. (Example: 11/02/2000");
+			System.out.println("Date of birth is invalid " + "\n" + "Enter date of birth again. (Example: 11/02/2000)");
 
 			setDateOfBirth(sc.nextLine());
 
