@@ -11,5 +11,26 @@ class Sweets extends Product {
 		this.fullPriceWithDiscount();
 
 	}
+	
+	public Sweets(String name, double price, int quantity, int discount) {
+		super(name, price, quantity, discount);
+		this.discount = 10;
+		this.fullPrice();
+		this.fullPriceWithDiscount();
+
+	}
+	
+	public Sweets(String name) {
+		super(name);
+		this.setPrice(1200);
+		this.discount = 10;
+		this.fullPrice();
+		this.fullPriceWithDiscount();
+
+	}
+	
+	public Sweets() {
+		super();
+	}
 
 }

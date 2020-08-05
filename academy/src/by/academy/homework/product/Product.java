@@ -11,6 +11,7 @@ public class Product {
 		super();
 	}
 	
+	
 	public Product(String name,double price,int quantity, int discount) {
 		super();
 		this.name = name;
@@ -27,6 +28,11 @@ public class Product {
 		this.quantity = quantity;
 		}
 	
+	public Product(String name) {
+		super();
+		this.name = name;
+		
+		}
 	
 	public String getName() {
 		return name;
